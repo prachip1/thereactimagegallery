@@ -1,0 +1,24 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    margin:2em;
+  
+}
+h1{
+    text-align: center;
+}
+.contents{
+ margin:4rem;
+}
+
+.btn{
+    padding:6rem;
+    background-color: rgba(199, 233, 241, 0.24);
+    border: 2px dotted rgb(202, 202, 202)
+}
+
+
+.btn:hover{
+    background-color: rgb(171, 235, 235);
+
+}
