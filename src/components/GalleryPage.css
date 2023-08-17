@@ -11,14 +11,59 @@ h1{
  margin:4rem;
 }
 
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+
 .btn{
-    padding:6rem;
-    background-color: rgba(199, 233, 241, 0.24);
-    border: 2px dotted rgb(202, 202, 202)
+    padding:2rem;
+    width:10em;
+    background-color: rgba(113, 225, 250, 0.24);
+    border:none;
+    font-size:18px;
+    border-radius: 6px;
+    font-weight: 700;
+    margin-top: 6px;
 }
 
 
 .btn:hover{
     background-color: rgb(171, 235, 235);
 
+}
+
+.addbtn{
+    padding: 40px;
+    border:2px solid;
+    border-style: dotted;
+    background-color: white;
+    font-size: large;
+    margin-top:2rem;
+   
+
+}
+.titleclass{
+    margin-top: 6rem;
+    padding: 8px;
+}
+.uploadbtn{
+    margin-top: 3.5rem;
+}
+.displaymain{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: hidden;
+    gap: 2rem;
+    margin:1em;
+    padding: 3em;
+  
+    
+}
+.displayclass img{
+  
+   width: 30rem!important;
 }

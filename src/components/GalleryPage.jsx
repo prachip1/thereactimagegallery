@@ -20,8 +20,8 @@ const handleUpload = async (e) =>{
     e.preventDefault();
     console.log("clicked on upload");
 
-    const title = e.target[0].value;
-    const file = e.target[1].files[0];
+    const title = e.target[1].value;
+    const file = e.target[0].files[0];
 
     try{
         const date = new Date().getTime();
@@ -86,9 +86,21 @@ const handleUpload = async (e) =>{
         
            <div className="addImage">
             <form onSubmit={handleUpload}>
-            <input type="text" placeholder="untitled" />
-            <input type="file"/>
-            <button type="submit">Upload</button>
+            <input type="file" id="file" style={{display:"none"}}/>
+            <label htmlFor="file">
+             <span className="addbtn">Add +</span>
+            </label>
+            <input type="text" placeholder="Enter title" className="titleclass" />
+            
+           
+
+            
+           
+           <div className="uploadbtn">
+           <button className="btn" type="submit">Upload</button>
+
+           </div>
+          
             </form>
            
         </div>

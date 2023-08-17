@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import "./GalleryPage.css";
 import {app,storage,db} from '../firebase';
-import {doc, setDoc, collection, getDocs,getDoc,query, QuerySnapshot} from "firebase/firestore";
+import {doc, setDoc, collection, getDocs,getDoc,query, QuerySnapshot, deleteField, updateDoc, deleteDoc} from "firebase/firestore";
 
 
 
@@ -21,6 +21,13 @@ const GalleryDisplay = () => {
         
         
     }
+
+    const deleteThis = async (i) =>{
+     
+    const ii = i;
+    const res= dataValue[ii].title;
+     await deleteDoc(doc(db,"imagegallery",res));
+    }
     
 
     useEffect(() => {
@@ -33,13 +40,17 @@ const GalleryDisplay = () => {
     }, [])
 
     return(
-        <div>
+        <div className="displaymain">
          {
             dataValue?.map((datas,i) =>(
                 
-                    <div key={i}>
+                    <div className="displayclass" key={i}>
                         <h4>{datas.title}</h4>
                         <img src={datas.photoURL} />
+                        <div>
+                        <button className="btn" onClick={()=> deleteThis(i)}>Delete This</button>
+                        </div>  
+                        
                     </div>
             
             ))
