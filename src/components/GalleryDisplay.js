@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import axios from 'axios';
+
 import "./GalleryPage.css";
-import {app,storage,db} from '../firebase';
-import {doc, setDoc, collection, getDocs,getDoc,query, QuerySnapshot, deleteField, updateDoc, deleteDoc} from "firebase/firestore";
+import {db} from '../firebase';
+import {doc,collection, getDocs, deleteDoc} from "firebase/firestore";
 
 
 
@@ -34,10 +34,7 @@ const GalleryDisplay = () => {
 
         displayData();
        
-      
-       
-      
-    }, [])
+}, [])
 
     return(
         <div className="displaymain">

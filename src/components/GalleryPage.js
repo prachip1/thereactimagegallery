@@ -1,19 +1,14 @@
-import React, { useState, useEffect } from "react";
-import axios from 'axios';
+import React from "react";
+
 import "./GalleryPage.css";
-import {app,storage,db} from '../firebase';
+import {storage,db} from '../firebase';
 import {ref, uploadBytesResumable, getDownloadURL} from 'firebase/storage';
-import {doc, setDoc, collection, getDocs} from "firebase/firestore";
+import {doc, setDoc} from "firebase/firestore";
 import GalleryDisplay from "./GalleryDisplay";
 
 
 
 const GalleryPage = () => {
-
-
-
-
-
 
 
 const handleUpload = async (e) =>{
@@ -74,11 +69,6 @@ const handleUpload = async (e) =>{
     
 }
 
-
-
-
-
-
     return(
         <div className="main">
              <h1>Photos Galley</h1>
@@ -91,11 +81,6 @@ const handleUpload = async (e) =>{
              <span className="addbtn">Add +</span>
             </label>
             <input type="text" placeholder="Enter title" className="titleclass" />
-            
-           
-
-            
-           
            <div className="uploadbtn">
            <button className="btn" type="submit">Upload</button>
 
